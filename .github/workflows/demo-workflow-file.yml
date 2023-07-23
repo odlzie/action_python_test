@@ -4,8 +4,17 @@ jobs:
   name: Hello world
   runs-on: ubuntu-latest
   steps:
-  - uses: actions/checkout@v2
-  - name: Write a multi-line message
-    run: |
-      echo This demo file shows a 
-      echo very basic and easy-to-understand workflow.
+    - uses: actions/checkout@v2
+    - name: Write a multi-line message
+      run: |
+        echo This demo file shows a 
+        echo very basic and easy-to-understand workflow.
+      
+# name: Basic test push
+# on: [push]
+   
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       -  run: echo Test One Worked!
