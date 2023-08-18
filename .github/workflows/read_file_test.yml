@@ -30,5 +30,7 @@ jobs:
 
     - name: commit output
       run: |
+        git config --global user.email "liuzhao9ster@gmail.com"
+        git config --global user.name "odlzie"
         git add .
         git commit -m "add output"
