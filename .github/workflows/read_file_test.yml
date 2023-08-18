@@ -22,6 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
         
-    - name: Test installation
-      run: python action_test.py -f "./data/input/organizations-100.csv"
+#    - name: Test installation
+#      run: python action_test.py -f "./data/input/organizations-100.csv"
+    - name: run .py
+      run: python check_new_file.py
+    - name: print
+      run: echo ${{ env.MY_VAR }}
+
        
