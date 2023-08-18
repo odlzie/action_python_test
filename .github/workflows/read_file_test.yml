@@ -24,9 +24,10 @@ jobs:
         
 #    - name: Test installation
 #      run: python action_test.py -f "./data/input/organizations-100.csv"
-    - name: run .py
+    - name: get latest csv file name
       run: python check_new_file.py
-    - name: print
-      run: echo ${{ env.MY_VAR }}
+
+    - name: run main.py file with new input file
+      run: python action_test.py -f ${{ env.MY_VAR }}
 
        

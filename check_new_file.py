@@ -19,12 +19,6 @@ class get_input_file:
         with open(env_file, "a") as f:
             f.write("my_csv={}".format(self.latest_csv))
 
-        print(os.getenv('GITHUB_ENV'))
-
 if __name__ == "__main__":
-    # my_class = get_input_file('./data/input')
-    # my_class.write_to_env()
-
-    env_file = os.getenv('GITHUB_ENV')
-    with open(env_file, "a") as myfile:
-        myfile.write("MY_VAR={}".format(12))
+    my_class = get_input_file('./data/input')
+    my_class.write_to_env()
