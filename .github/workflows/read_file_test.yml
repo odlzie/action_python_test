@@ -28,7 +28,7 @@ jobs:
       run: python check_new_file.py
 
     - name: run main.py file with new input file
-      run: echo ${{ env.my_csv }}
-#      run: python action_test.py -f ${{ env.my_csv }}
+#      run: echo ${{ env.my_csv }}
+      run: python action_test.py -f ${{ env.my_csv }}
 
        
