@@ -21,14 +21,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
-        
-#    - name: Test installation
-#      run: python action_test.py -f "./data/input/organizations-100.csv"
+
     - name: get latest csv file name
       run: python check_new_file.py
 
     - name: run main.py file with new input file
-#      run: echo ${{ env.my_csv }}
       run: python action_test.py -f ${{ env.my_csv }}
 
-       
+    - name: commit output
+      run: |
+        git add .
+        git commit -m "add output"
