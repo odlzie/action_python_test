@@ -34,3 +34,7 @@ jobs:
         git config --global user.name "odlzie"
         git add .
         git commit -m "add output"
+        git remote set-url origin https://odlzie:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
