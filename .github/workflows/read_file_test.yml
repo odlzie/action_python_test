@@ -24,6 +24,5 @@ jobs:
         python -m pip install -r requirements.txt
         
     - name: Test installation
-      run: 
-      python action_test.py
+      run: python action_test.py
        
