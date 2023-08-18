@@ -28,6 +28,6 @@ jobs:
       run: python check_new_file.py
 
     - name: run main.py file with new input file
-      run: python action_test.py -f ${{ env.MY_VAR }}
+      run: python action_test.py -f ${{ env.my_csv }}
 
        
